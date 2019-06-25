@@ -1,25 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "rsuite/styles/index.less";
+import "./App.less";
+
+import { HomePage, InscricaoPage } from "./pages";
+import styled from "styled-components";
+
+const AppContainer = styled.div`
+  min-height: 100vh;
+  width: 100%;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContainer id="App">
+      <HomePage />
+      <InscricaoPage />
+    </AppContainer>
   );
 }
 
